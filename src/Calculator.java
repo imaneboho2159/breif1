@@ -3,22 +3,22 @@ import java.util.Scanner;
 
 public class Calculator {
 
-    // Addition
+
     static double Addition(double n1, double n2) {
         return (n1 + n2);
     }
 
-    // Subtraction
+
     static double Subtraction(double n1, double n2) {
         return (n1 - n2);
     }
 
-    // Multiplication
+
     static double Multiplication(double n1, double n2) {
         return (n1 * n2);
     }
 
-    // Division
+
     static double Division(double n1, double n2) {
         if (n2 == 0) {
             System.out.println("Invalid number! Division by zero.");
@@ -27,12 +27,12 @@ public class Calculator {
         return (n1 / n2);
     }
 
-    // Exponentiation
+
     static double Puissance(double n1, double exponent) {
         return Math.pow(n1, exponent);
     }
 
-    // Square Root
+
     static double Racine(double n1) {
         if (n1 < 0) {
             System.out.println("Invalid number! Cannot calculate square root of a negative number.");
@@ -59,12 +59,15 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        double n1, n2, exponent;
 
+
+
+        double n1=0, n2=0, exponent=0;
         int choice;
 
         do {
-            System.out.println("\n1-Addition (+)");
+            System.out.println("choose the operator you wante ");
+            System.out.println("1-Addition (+)");
             System.out.println("2-Subtraction (-)");
             System.out.println("3-Multiplication (*)");
             System.out.println("4-Division (/)");
@@ -74,7 +77,34 @@ public class Calculator {
             System.out.println("9-Exit the system");
 
             System.out.print("Enter your choice: ");
+
             choice = scanner.nextInt();
+
+            switch (choice){
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                    System.out.println("Enter the first number: ");
+                    n1 = scanner.nextDouble();
+                    System.out.print("Enter the second number: ");
+                    n2 = scanner.nextDouble();
+                    break;
+                case 5:
+                    System.out.println("Enter the first number: ");
+                    n1 = scanner.nextDouble();
+                    System.out.println("Enter exponent: ");
+                    exponent = scanner.nextDouble();
+                    break;
+                case 6:
+                    System.out.println("Enter a non negative integer: ");
+                    n1 = scanner.nextDouble();
+                    break;
+                case 7:
+                    System.out.println("Enter a non negative integer: ");
+                    n1 = scanner.nextInt();
+
+            }
 
             switch (choice) {
                 case 1:
@@ -90,18 +120,16 @@ public class Calculator {
                     System.out.println("Result: " + Division(n1, n2));
                     break;
                 case 5:
-                    System.out.print("Enter the exponent: ");
-                    exponent = scanner.nextDouble();
+
                     System.out.println("Result: " + Puissance(n1, exponent));
                     break;
                 case 6:
                     System.out.println("Result: " + Racine(n1));
                     break;
                 case 7:
-                    int factorialResult = Factorielle((int) n1);
-                    if (factorialResult != -1) {
-                        System.out.println("Result: " + factorialResult);
-                    }
+
+                        System.out.println("Result: " + Factorielle ((int) n1));
+
                     break;
                 case 9:
                     System.out.println("Goodbye!");
@@ -109,7 +137,8 @@ public class Calculator {
                 default:
                     System.out.println("Invalid choice! Please try again.");
             }
-        } while (choice != 9);
+        }
+        while (choice != 9);
 
         scanner.close();
     }
