@@ -60,10 +60,6 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
 
         double n1, n2, exponent;
-        System.out.print("Enter the first number: ");
-        n1 = scanner.nextDouble();
-        System.out.print("Enter the second number: ");
-        n2 = scanner.nextDouble();
 
         int choice;
 
