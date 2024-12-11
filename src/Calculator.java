@@ -85,23 +85,23 @@ public class Calculator {
                 case 2:
                 case 3:
                 case 4:
-                    System.out.println("Enter the first number: ");
+                    System.out.print("Enter the first number: ");
                     n1 = scanner.nextDouble();
                     System.out.print("Enter the second number: ");
                     n2 = scanner.nextDouble();
                     break;
                 case 5:
-                    System.out.println("Enter the first number: ");
+                    System.out.print("Enter the first number: ");
                     n1 = scanner.nextDouble();
-                    System.out.println("Enter exponent: ");
+                    System.out.print("Enter exponent: ");
                     exponent = scanner.nextDouble();
                     break;
                 case 6:
-                    System.out.println("Enter a non negative integer: ");
+                    System.out.print("Enter a non negative integer: ");
                     n1 = scanner.nextDouble();
                     break;
                 case 7:
-                    System.out.println("Enter a non negative integer: ");
+                    System.out.print("Enter a non negative integer: ");
                     n1 = scanner.nextInt();
 
             }
@@ -131,14 +131,14 @@ public class Calculator {
                         System.out.println("Result: " + Factorielle ((int) n1));
 
                     break;
-                case 9:
+                case 8:
                     System.out.println("Goodbye!");
                     break;
                 default:
                     System.out.println("Invalid choice! Please try again.");
             }
         }
-        while (choice != 9);
+        while (choice != 8);
 
         scanner.close();
     }
