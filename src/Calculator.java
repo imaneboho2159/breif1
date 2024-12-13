@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Calculator {
 
 
+
     static double Addition(double n1, double n2) {
         return (n1 + n2);
     }
